@@ -1,4 +1,4 @@
-return (function( context ){
+(function( context ){
 
 	var _domain = 'http://' + window.location.host;
 	var _messageHandlers = [];
@@ -254,6 +254,7 @@ return (function( context ){
 			}
 
 			childWindow = window.open( url, target, windowOptionsString );
+
 			var registeredWindow = _childWindowCollection.registerWindow( childWindow );
 			registeredWindow.registerOnLoadHandlers( childWindowReadyHandlers );
 			childWindowKey = registeredWindow.getKey();
